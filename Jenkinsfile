@@ -17,10 +17,10 @@ pipeline {
         stage('Upload to Nexus') {
             steps {
                 sh '''
-                curl -u admin:password \
-                --upload-file target/final-webapp-0.0.1-SNAPSHOT.jar \
-                http://10.17.10.121:8081/repository/final/com/example/demo/0.0.1-SNAPSHOT/demo-0.0.1-SNAPSHOT.jar
-                '''
+curl -v -u admin:password \
+--upload-file target/final-webapp-0.0.1-SNAPSHOT.jar \
+http://10.17.10.121:8081/repository/final/com/example/finalwebapp/0.0.1-SNAPSHOT/final-webapp-0.0.1-SNAPSHOT.jar
+'''
             }
         }
     }

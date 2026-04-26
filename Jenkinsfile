@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/ondeckera1/final-k8s-project.git'
-            }
-        }
+ stage('Checkout') {
+    steps {
+        git branch: 'main', url: 'https://github.com/ondeckera1/final-k8s-project.git'
+    }
+}
 
         stage('Build') {
             steps {

@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'git@github.com:ondeckera1/final-k8s-project.git'
+                git 'https://github.com/ondeckera1/final-k8s-project.git'
             }
         }
 
